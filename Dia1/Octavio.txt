@@ -1,0 +1,269 @@
+
+************Entrada de datos*******************
+Formato para cin es;
+cin>>var;
+
+#include <iostream>
+using namespace std;
+int main()
+{
+
+float a,b;
+cout<<"Escribe a :"<<endl;
+cin>>a;
+cout<<"Escribe b :"<<endl;
+cin>>b;
+
+     cout<<"suma a+b=\t"<<a+b<<endl;
+     cout<<"Resta a+b=\t"<<a-b<<endl;
+     cout<<"Multiplicaci\xA2n a*b=\t"<<a*b<<endl;
+     cout<<"Divisi\xA2n a/b= \t"<<(a/b)<<endl;
+
+}
+
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main()
+{
+
+   float a,b,c,x_1,x_2;
+   char opera;
+  cout<<"Crea tu polinomio:"<<endl;
+  cout<<"Los coeficientes a,b,c"<<endl;
+  cout<<"coeficiente Ax^2 =";
+  cin>>a;
+  cout<<endl;
+  cout<<"coeficiente Bx=";
+  cin>>b;
+  cout<<endl;
+  cout<<"coeficiente C=";
+  cin>>c;
+  cout<<endl;
+  if(c>0||b>0||a>0){
+  opera='+';
+  }
+
+  cout<<"Tu polinomio es : "<<a<<"x^2"<<opera<<b<<"x"<<opera<<c<<"=0"<<endl;
+
+  x_1=(((-1)*b)+sqrt(pow(b,2)-4*(a*c)))/(2*a);
+   x_2=(((-1)*b)-sqrt(pow(b,2)-4*(a*c)))/(2*a);
+
+  cout<< "X_1="<<x_1<<"\t "<< "X_2="<<x_2<<"\t ";
+
+  
+  
+
+
+}
+
+
+/*
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout << "!Hola Mundo!\n";
+    return 0;
+
+
+
+}
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout << "!Bienvenido a";
+    cout << "!Dev-c++!\n";
+    return 0;
+
+
+
+}
+
+
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout << "!Bienvenido \na\nC++!\n";
+
+    return 0;
+
+
+
+}
+
+
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+
+    int a,b,c;
+    float x,y,z;
+    a=5;
+    b=-2;
+    c=8;
+    x=a;
+    a=b;
+    y=x;
+    z=8.5;
+    x=z;
+
+    cout<<"a="<<a<<"\nb="<<b<<"\nc"<<c<<"\n";
+    cout<<"x="<<x<<"\ny="<<y<<"\nz"<<z<<"\n";
+
+    //cout << "Introducción a\n las computadoras";
+   // cout << " y a la \n programación";
+    //cout << "en\n C++\n";
+
+    return 0;
+
+
+
+}
+
+#include <iostream>
+using namespace std;
+int main()
+{
+   cout<<"Curso de programaci\xA2n\n KMMX \n HOLA CDMX";
+
+   int u=20;
+
+
+   for(int i=0;i<u;i++){
+
+          for(int j=1; j<=i; ++j){
+
+         cout<<"* ";
+          }
+          cout<<"\n";
+   }
+
+   cout<<"Color"<<"\t"<<"R"<<"\t"<<"G"<<"\t"<<"B"<<endl;
+   cout<<"Rojo"<<"\t"<<"255"<<"\t"<<"0"<<"\t"<<"0"<<endl;
+   cout<<"Verde"<<"\t"<<"0"<<"\t"<<"255"<<"\t"<<"0"<<endl;
+   cout<<"Blanco"<<"\t"<<"255"<<"\t"<<"255"<<"\t"<<"255"<<endl;
+   cout<<"Gris"<<"\t"<<"128"<<"\t"<<"128"<<"\t"<<"128"<<endl;
+
+    return 0;
+}
+
+#include <iostream>
+using namespace std;
+int main()
+{
+
+     float a,b,d;
+     int c;
+     int a1;
+     a1=7;
+     a=7;
+     b=2;
+     c=2;
+     d=4;
+
+
+     cout<<"suma a+b=\t"<<a+b<<endl;
+     cout<<"Resta a+b=\t"<<a-b<<endl;
+     cout<<"Multiplicaci\xA2n a*b=\t"<<a*b<<endl;
+     cout<<"Divisi\xA2n a/b= \t"<<(a/b)<<endl;
+     cout<<"a+b-d/c= "<<a+b-d/c<<endl;
+     cout<<"a mod c+d="<<a1%c+d<<endl;
+     cout<<"a+b/(2c+3)="<<(a+b)/(2*c+3)<<endl;
+     cout<<"a-c/4bc= "<<(a-c)/(4*b*c)<<endl;
+
+
+    return 0;
+}
+*/
+#include <iostream>
+#include <math.h>
+#include <string>
+using namespace std;
+
+   std::string getVocal(string apellido);
+
+    std::string getVocal(string apellido){
+        int size_=apellido.length();
+        for(int i=0;i<size_;i++){
+          //  cout << i << apellido[i] ;
+           cout<<apellido[i]<<endl;
+           if(apellido[i].compare("a")){
+             cout<<"Localice una a"<<endl;
+           }
+         /*  if(apellido[i].compare("i")){
+             cout<<"Localice una i"<<endl;
+           }
+           if(apellido[i].compare("o")){
+            cout<<"Localice una o"<<endl;
+           }*/
+           if(apellido[i].compare("u")){
+                cout<<"Localice una u"<<endl;
+           }
+
+
+        }
+
+    }
+
+int main()
+{
+
+     std::string Ape_pa,Ape_ma;
+
+      char Nombre[100],Ape_Pa[100],Ape_Ma[100];
+      int dia;
+      int Year_;
+
+     cout<<"Introduce tu nombre :"<<endl;
+    cin.getline(Nombre,sizeof(Nombre));
+     //cin>>Nombre;
+     cout<<"Introduce tu apellido paterno :"<<endl;
+     cin.getline(Ape_Pa,sizeof(Ape_Pa));
+     //cin>>Ape_pa;
+     cout<<"Introduce tu materno :"<<endl;
+      cin.getline(Ape_Ma,sizeof(Ape_Ma));
+ //    cin>>Ape_ma;
+
+     cout<<"Mes de nacimiento :"<<endl;
+     cout<<"1) Enero"<<"\t"<<"2) Febrero"<<"\t"<<"3) Marzo"<<"\t"<<"4) Abril"<<"\t"<<endl;
+     cout<<"5) Mayo"<<"\t \t"<<"6) Junio"<<"\t"<<"7) Julio"<<"\t"<<"8) Agosto"<<"\t"<<endl;
+     cout<<"9) Septiembre"<<"\t"<<"10) Octubre"<<"\t"<<"11) Noviembre"<<"\t"<<"12) Diciembre"<<"\t"<<endl;
+
+      string NombString = string(Nombre);
+      string Ape_pa_ = string(Ape_Pa);
+
+      cout<<"NombString"<<NombString;
+
+  //   int ext_ApPa=Ape_pa.length();
+
+
+       getVocal(Ape_pa_.substr(1,Ape_pa_.length()));
+
+    // std::string rfc_NOm=Ape_pa.substr(0,1)+nombre.substr(0,1);
+
+    // cout<<rfc_NOm<<endl;
+
+
+
+}
+
+
+
